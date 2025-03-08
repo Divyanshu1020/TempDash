@@ -2,7 +2,8 @@ import PageContainer from '@/components/layout/page-container';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BarGraph } from './components/features/overview/components/bar-graph';
 import { RecentSales } from './components/features/overview/components/recent-sales';
-import ProductFilterTable from './components/features/overview/components/product-filter-table';
+import { PieGraph } from './components/features/overview/components/pie-graph';
+import SalesThisMonth from './components/features/overview/components/sales-this-month';
 function App() {
   return (
     <PageContainer>
@@ -113,13 +114,28 @@ function App() {
             </CardContent>
           </Card>
         </div>
-        <div className='grid gap-4 grid-cols-1 lg:grid-cols-7'>
-          <div className='col-span-7 lg:col-span-4'><BarGraph /></div>
+        <div className='grid gap-4 grid-cols-1 lg:grid-cols-8'>
+          <div className='col-span-8 lg:col-span-5'><BarGraph /></div>
           <Card className=' col-span-7 lg:col-span-3'>
+            {/* sales arallel routes */}
+            <PieGraph/>
+          </Card>
+
+
+          
+          <Card className=' col-span-8 lg:col-span-4'>
+            <SalesThisMonth/>
+          </Card>
+
+          <Card className=' col-span-8 lg:col-span-4'>
+            <SalesThisMonth/>
+          </Card>
+
+          <Card className=' col-span-8 '>
             {/* sales arallel routes */}
             <RecentSales/>
           </Card>
-          <div className='col-span-7 '><ProductFilterTable/></div>
+
         </div>
       </div>
     </PageContainer>

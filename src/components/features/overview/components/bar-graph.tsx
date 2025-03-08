@@ -119,11 +119,11 @@ const chartConfig = {
   },
   desktop: {
     label: 'Desktop',
-    color: 'hsl(var(--chart-1))'
+    color: '#4a8fde'
   },
   mobile: {
     label: 'Mobile',
-    color: 'hsl(var(--chart-2))'
+    color: '#4aa8de'
   },
   error: {
     label: 'Error',
@@ -160,7 +160,7 @@ export function BarGraph() {
   }
 
   return (
-    <Card>
+    <Card className=''>
       <CardHeader className='flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row'>
         <div className='flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6'>
           <CardTitle>Bar Chart - Interactive</CardTitle>
